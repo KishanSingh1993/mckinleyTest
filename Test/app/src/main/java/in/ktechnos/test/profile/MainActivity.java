@@ -1,6 +1,7 @@
 package in.ktechnos.test.profile;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -28,6 +29,7 @@ import in.ktechnos.test.TestApplication;
 public class MainActivity extends AppCompatActivity {
     private CircleImageView profileImage;
     private TextView userName,userEmail;
+    private RecyclerView recyclerView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
          userName = findViewById(R.id.name);
          userEmail = findViewById(R.id.email);
          profileImage = findViewById(R.id.profile_image);
+         recyclerView = findViewById(R.id.imgList);
     }
 
     private void getUserData(){
@@ -72,7 +75,9 @@ public class MainActivity extends AppCompatActivity {
                     JSONArray jsonArray = new JSONArray(dataObj.getString("data"));
                     int size = jsonArray.length();
                     String company = dataObj.getString("company");
+                    String text = dataObj.getString("text");
                     userName.setText(company);
+                    userEmail.setText(text);
                     //Picasso.get().load(imgUrl).into(profileImage);
                 } catch (JSONException e) {
                     e.printStackTrace();

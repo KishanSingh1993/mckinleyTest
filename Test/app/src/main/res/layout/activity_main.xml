@@ -40,7 +40,7 @@
                 android:textSize="18dp"
                 android:textColor="@android:color/white"
                 android:textStyle="bold"
-                android:text="Kishan SIngh"
+                android:text=""
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -50,7 +50,7 @@
                 android:textSize="18dp"
                 android:textColor="@android:color/white"
                 android:textStyle="normal"
-                android:text="Kishan@s-epos.com"
+                android:text=""
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -103,6 +103,7 @@
                 >
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/imgList"
+                    android:layout_margin="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
